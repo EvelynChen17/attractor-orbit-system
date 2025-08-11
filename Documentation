@@ -1,0 +1,28 @@
+Attractor Orbit System and Behavior Tree Documentation
+
+Introduction
+
+This document provides a detailed explanation of the core components implemented in this app: the Attractor Orbit System and the Behavior Tree (also known as the node tree). These concepts form the theoretical foundation of our self-discipline and behavior design tool.
+
+Attractor Orbit System
+
+The Attractor Orbit System models how behaviors evolve over time as trajectories within an abstract phase space. An “attractor” represents a stable pattern or state that the system tends to converge towards, shaping user habits and routines.
+	•	Attractor: A set of states or behaviors that the system gravitates to and maintains.
+	•	Orbit: The path or trajectory that behavior follows as it moves in the state space.
+	•	Purpose: By visualizing and manipulating attractor orbits, users can understand and influence their behavioral patterns towards desired outcomes.
+
+Behavior Tree (Node Tree)
+
+The Behavior Tree is a hierarchical model used to define and control sequences of actions or decisions:
+	•	Nodes: Fundamental units representing behaviors or control logic.
+	•	Leaf Nodes: Actions or atomic behaviors that perform specific tasks.
+	•	Composite Nodes: Control flow nodes (such as sequences, selectors) that govern the execution order of child nodes.
+	•	Usage in App: Users can create, modify, and arrange behavior nodes visually, allowing flexible design of self-discipline workflows.
+
+Integration in the App
+
+In this application:
+	•	The Attractor Orbit System is visualized as dynamic trajectories users can interact with to track and adjust their habits.
+	•	The Behavior Tree interface allows drag-and-drop creation of behavior sequences, enabling customization and expansion of self-management strategies.
+
+By combining these two models, the app provides a powerful yet intuitive tool to help users build sustainable behavioral changes.
