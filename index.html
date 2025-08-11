@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Attractor Tracks — Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="toolbar">
+    <div class="controls">
+      <button id="newCanvasBtn">New Canvas</button>
+      <button id="simBtn">Run 7-day Simulation</button>
+      <button id="saveBtn">Save</button>
+      <button id="loadBtn">Load</button>
+    </div>
+
+    <h3>Toolbox (drag to canvas)</h3>
+    <div id="toolbox">
+      <div class="toolItem" draggable="true" data-type="attractor">✨ Attractor</div>
+      <div class="toolItem" draggable="true" data-type="trigger">⚡ Trigger</div>
+      <div class="toolItem" draggable="true" data-type="action">▶ Action</div>
+    </div>
+
+    <hr />
+    <div class="notes">
+      <p>Tips:</p>
+      <ul>
+        <li>Drag a tool item into the canvas to create a node.</li>
+        <li>Drag a node onto another node to create parent → child relation.</li>
+        <li>Click a node to edit its properties.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canvasWrap">
+    <div id="canvas">
+      <svg id="links"></svg>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <h4>Node Editor</h4>
+    <div id="editorEmpty">Select a node to edit.</div>
+
+    <div id="editor" style="display:none">
+      <label>Name</label>
+      <input id="n_name" type="text" />
+
+      <label>Type</label>
+      <select id="n_type">
+        <option value="attractor">Attractor</option>
+        <option value="trigger">Trigger</option>
+        <option value="action">Action</option>
+      </select>
+
+      <label>Base activation probability (0-100)</label>
+      <input id="n_prob" type="number" min="0" max="100" />
+
+      <label>Frequency label (e.g. weekly=3)</label>
+      <input id="n_freq" type="text" />
+
+      <label>Notes</label>
+      <textarea id="n_note"></textarea>
+
+      <div class="editorButtons">
+        <button id="saveNode">Save</button>
+        <button id="deleteNode">Delete</button>
+        <button id="exportBtn">Export JSON</button>
+      </div>
+
+      <div class="parentBox">
+        <strong>Parents:</strong>
+        <div id="parentList">—</div>
+      </div>
+
+      <div id="simResult" style="display:none"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
