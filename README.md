@@ -13,3 +13,5 @@ The design inspiration for this project comes from the Musk's one hour rule , an
 3.Customize behaviors through the interface.
 ## Author
 Evelyn Chen - CS student,with passion for Deep Learning
+## License
+This project is licensed under the MIT LIcense-see the LICENSE file for details.
